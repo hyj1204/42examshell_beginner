@@ -6,9 +6,11 @@
 /*   By: yijhuang <yijhuang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 00:46:39 by yijhuang          #+#    #+#             */
-/*   Updated: 2019/03/23 13:41:17 by yijhuang         ###   ########.fr       */
+/*   Updated: 2019/06/20 13:13:03 by yijhuang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 int	*ft_rrange(int start, int end)
 {	

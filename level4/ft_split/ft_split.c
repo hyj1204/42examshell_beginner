@@ -6,7 +6,7 @@
 /*   By: yijhuang <yijhuang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 16:09:42 by yijhuang          #+#    #+#             */
-/*   Updated: 2019/07/15 22:47:23 by yijhuang         ###   ########.fr       */
+/*   Updated: 2019/07/15 22:54:56 by yijhuang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,9 @@ int		ft_wordcount(char const *str)   //得出一共有几个单词
 {
 	int		row;
 	int		i;
-    int     delimit;
 
 	row = 0;
 	i = 0;
-    delimit = 0;
 	if (!str)
 		return (0);
 	// printf("str = %s\n", str);

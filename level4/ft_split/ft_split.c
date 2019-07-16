@@ -6,11 +6,13 @@
 /*   By: yijhuang <yijhuang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 16:09:42 by yijhuang          #+#    #+#             */
-/*   Updated: 2019/06/17 19:08:36 by yijhuang         ###   ########.fr       */
+/*   Updated: 2019/07/15 22:47:23 by yijhuang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
+// #include <stdio.h>
 
 int is_space(char c)
 {
@@ -31,20 +33,19 @@ int		ft_wordcount(char const *str)   //得出一共有几个单词
     delimit = 0;
 	if (!str)
 		return (0);
+	// printf("str = %s\n", str);
 	while (str[i])
     {
-        while (str[i] == ' ' && str[i] == '\t' && str[i] == '\n')
-        {
+        while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
             i++;
-            delimit = 1;
-        }
-        if (str[i] && delimit == 1)
-        {
-            row++;
-            delimit = 0;
-        }
-        i++;
+		if (str[i])
+		{
+			row++;
+			while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))
+				i++;
+		}	
     }
+	// printf("row = %d\n", row);
     return row;
 }
 

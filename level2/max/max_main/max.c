@@ -6,7 +6,7 @@
 /*   By: yijhuang <yijhuang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/26 09:56:54 by exam              #+#    #+#             */
-/*   Updated: 2019/02/26 18:40:28 by yijhuang         ###   ########.fr       */
+/*   Updated: 2019/08/26 13:32:42 by yijhuang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ int max(int* tab, unsigned int len)
 	}
 	else
 	{
-	while (i > 0)
+		max = tab[i];
+	while (i >= 0)
 	{
-		if (tab[i] <= tab[i - 1])
-			max = tab[i - 1];
+		if (tab[i] >= max)
+			max = tab[i];
 		i--;
 	}
 	}
@@ -40,6 +41,6 @@ int max(int* tab, unsigned int len)
 
 int main()
 {
-	int a[] = {-17,-1,17,-2,-11,4,-5,-16,2,15,-17,15,11,2,-17,7,-18,-12,-10,1,-6,14,0};
-	printf("%d\n", max(a, 23));
+	int a[] = {6,-1,3,-8,1,1,7,-12,15,-3,2,7,-7,11,13,-1,-8,-12};
+	printf("%d\n", max(a, 18));
 }

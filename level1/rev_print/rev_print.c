@@ -16,6 +16,7 @@ int		main(int argc, char **argv)
 		{
 			i++;
 		}
+		i = i - 1;
 		while (i >= 0)
 		{
 			ft_putchar(argv[1][i]);
